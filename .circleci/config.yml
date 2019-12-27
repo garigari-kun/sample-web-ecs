@@ -3,10 +3,10 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.5.5
-        working_directory: ~/repo
+    working_directory: ~/repo
     steps:
       - checkout
-      - run: # circleci の ruby のコンテナの bundler のバージョンは古いので update する
+      - run:
         name: bundle update
         command: gem install bundler:1.16.1
       - restore_cache:
