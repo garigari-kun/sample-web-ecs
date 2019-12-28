@@ -50,10 +50,10 @@ workflows:
   test:
     jobs:
       - build
-      - build_image:
-        requires:
-          - build
-        filters:
-          branches:
-            only: master
+      - build_image
+        # requires:
+        #   - build
+        # filters:
+        #   branches:
+        #     only: master
 
