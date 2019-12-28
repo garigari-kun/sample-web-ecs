@@ -1,6 +1,7 @@
 FROM ruby:2.5.5
 ENV APP_ROOT /app
 WORKDIR $APP_ROOT
+ADD Gemfile $APP_ROOT
 ADD Gemfile.lock $APP_ROOT
 RUN \
     gem install bundler:1.16.1 && \
